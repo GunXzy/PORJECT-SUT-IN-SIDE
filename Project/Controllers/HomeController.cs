@@ -11,7 +11,7 @@ namespace Project
 {
     public class HomeController : Controller
     {
-        private Entities db = new Entities();
+        private Entities_new db = new Entities_new();
 
         // GET: Home
         public ActionResult Index()
@@ -20,7 +20,7 @@ namespace Project
         }
 
         // GET: Home/Details/5
-        public ActionResult Details(int? id)
+        /*public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -32,18 +32,18 @@ namespace Project
                 return HttpNotFound();
             }
             return View(store);
-        }
+        }*/
 
         // GET: Home/Create
-        public ActionResult Create()
+        /*public ActionResult Create()
         {
             return View();
-        }
+        }*/
 
         // POST: Home/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+       /* [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "product_id,url,name,time,Review")] Store store)
         {
@@ -55,10 +55,10 @@ namespace Project
             }
 
             return View(store);
-        }
+        }*/
 
         // GET: Home/Edit/5
-        public ActionResult Edit(int? id)
+        /*public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -70,12 +70,12 @@ namespace Project
                 return HttpNotFound();
             }
             return View(store);
-        }
+        }*/
 
         // POST: Home/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "product_id,url,name,time,Review")] Store store)
         {
@@ -86,10 +86,10 @@ namespace Project
                 return RedirectToAction("Index");
             }
             return View(store);
-        }
+        }*/
 
         // GET: Home/Delete/5
-        public ActionResult Delete(int? id)
+        /*public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -101,10 +101,10 @@ namespace Project
                 return HttpNotFound();
             }
             return View(store);
-        }
+        }*/
 
         // POST: Home/Delete/5
-        [HttpPost, ActionName("Delete")]
+        /*[HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -112,7 +112,7 @@ namespace Project
             db.Stores.Remove(store);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
+        }*/
 
         protected override void Dispose(bool disposing)
         {

@@ -8,7 +8,7 @@
     <Property Name="url" Type="varchar" MaxLength="50" />
     <Property Name="name" Type="varchar" MaxLength="50" />
     <Property Name="time" Type="varchar" MaxLength="50" />
-    <Property Name="Review" Type="varchar" MaxLength="50" />
+    <Property Name="Review" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />

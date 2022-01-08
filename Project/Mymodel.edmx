@@ -13,7 +13,7 @@
           <Property Name="url" Type="varchar" MaxLength="50" />
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="time" Type="varchar" MaxLength="50" />
-          <Property Name="Review" Type="varchar" MaxLength="50" />
+          <Property Name="Review" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />
@@ -31,9 +31,9 @@
           <Property Name="url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Review" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Review" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities_new" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Stores" EntityType="Self.Store" />
         </EntityContainer>
       </Schema>
@@ -41,7 +41,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities_new">
           <EntitySetMapping Name="Stores">
             <EntityTypeMapping TypeName="Model.Store">
               <MappingFragment StoreEntitySet="Store">

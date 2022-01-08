@@ -600,10 +600,10 @@ C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\bin\
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.csproj.AssemblyReference.cache
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.Migrations.InitialCreate.resources
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.csproj.GenerateResource.cache
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.dll
 C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.pdb
+C:\Users\tokia\source\repos\Project_test_code-2\PORJECT-SUT-IN-SIDE\Project\obj\Debug\Project.csproj.AssemblyReference.cache

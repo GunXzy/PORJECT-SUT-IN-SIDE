@@ -12,7 +12,7 @@ namespace Project
 {
     public class StoresController : Controller
     {
-        private Entities db = new Entities();
+        private Entities_new db = new Entities_new();
 
         // GET: Stores
         public ViewResult Index(string sortOrder, string searchString)

@@ -18,6 +18,6 @@ namespace Project
         public string url { get; set; }
         public string name { get; set; }
         public string time { get; set; }
-        public string Review { get; set; }
+        public int Review { get; set; }
     }
 }
