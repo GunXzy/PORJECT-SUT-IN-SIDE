@@ -111,70 +111,80 @@
         </div>
     </div>-->
 
-<section class="py-5">
+    <section class="py-5">
 
-    @*แนะนำร้านอาหารเกิดใหม่*@
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="divider-custom divider-light">
-            <h1 style="color: white; font-size: 42px">แนะนำร้านอาหารเกิดใหม่</h1>
-            <div class="divider-custom-line"></div>
-        </div>
+        @*แนะนำร้านอาหารเกิดใหม่*@
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="divider-custom divider-light">
+                <h1 style="color: white; font-size: 42px">แนะนำร้านอาหารเกิดใหม่</h1>
+                <div class="divider-custom-line"></div>
+            </div>
 
-        @for (var i = 1; i <= Model.ToList().Count(); i++)
-        {
-            var indexItem = i - 1;
-            if (i == 1 || i % 4 == 1)
+            @for (var i = 1; i <= Model.ToList().Count(); i++)
             {
-                @:<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                }
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Status New-->
-                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">New!</div>
-                        <!-- Product image -->
-                        <img class="card-img-top" src="@Url.Content("~/Content/images/" + (Model.ElementAt(indexItem).url))" alt="..." />
-                        <!-- <img class="img-responsive" style="max-width: 70%;" src=@Url.Content("~/Content/images/" + (Model.ElementAt(indexItem).url)) /> -->
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">@Model.ElementAt(indexItem).name</h5>
-                                <!-- time -->
-                                @Model.ElementAt(indexItem).time
+                var indexItem = i - 1;
+                if (i == 1 || i % 4 == 1)
+                {
+                    @:<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    }
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Status New-->
+                            <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">New!</div>
+                            <!-- Product image -->
+                            <img class="card-img-top" src="@Url.Content("~/Content/images/" + (Model.ElementAt(indexItem).url))" alt="..." />
+                            <!-- <img class="img-responsive" style="max-width: 70%;" src=@Url.Content("~/Content/images/" + (Model.ElementAt(indexItem).url)) /> -->
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">@Model.ElementAt(indexItem).name</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        @for (var s = 1; s <= 3; s++)
+                                        {
+                                            <div class="bi-star-fill"></div>
+                                        }
+                                    </div>
+                                    <!-- time -->
+                                    @Model.ElementAt(indexItem).time
+                                </div>
                             </div>
-                        </div>
 
 
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="@Url.Action("Index", "Details")">ดูเพิ่มเติม</a>
+                            <!-- Product actions-->
+                            <div class="pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    @*<a class="btn btn-outline-dark mt-auto" href="@Url.Action("Index", "Details")">ดูเพิ่มเติม</a>*@
+                                    @Html.ActionLink("Details", "Details", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-outline-dark mt-auto" })
+                                    @Html.ActionLink("Edit", "Edit", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-warning" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-danger" })
+                                </div>
+                            </div>
+                            <br />
+
+                            <!--<div class="caption">
+                                <h3> @Model.ElementAt(indexItem).name </h3>
+                                <h5> @Model.ElementAt(indexItem).time </h5>
+                                <h5> @Model.ElementAt(indexItem).Review </h5>
+                                @Html.ActionLink("Details", "Details", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-info" })
+                                @Html.ActionLink("Edit", "Edit", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-warning" })
                                 @Html.ActionLink("Delete", "Delete", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-danger" })
-                            </div>
+
+                            </div>-->
+
                         </div>
-
-                        <!--<div class="caption">
-                            <h3> @Model.ElementAt(indexItem).name </h3>
-                            <h5> @Model.ElementAt(indexItem).time </h5>
-                            <h5> @Model.ElementAt(indexItem).Review </h5>
-                            @Html.ActionLink("Details", "Details", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-info" })
-                            @Html.ActionLink("Edit", "Edit", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-warning" })
-                            @Html.ActionLink("Delete", "Delete", new { id = @Model.ElementAt(indexItem).product_id }, new { @class = "btn btn-danger" })
-
-                        </div>-->
 
                     </div>
-
-                </div>
-                if (i % 4 == 0)
-                {
-                @:</div>
+                    if (i % 4 == 0)
+                    {
+                    @:</div>
+                }
             }
-        }
-    </div>
-    @*แนะนำร้านอาหารเกิดใหม่*@
+        </div>
+        @*แนะนำร้านอาหารเกิดใหม่*@
 
-</section>
+    </section>
 
     <!--<table class="table">
         <tr>
